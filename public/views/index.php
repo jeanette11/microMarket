@@ -1,4 +1,5 @@
 <?php
+	//Pantalla inicio
 	require_once('template/head.php');
 	require_once('template/left_menu.php');
 	require_once('template/header.php');
