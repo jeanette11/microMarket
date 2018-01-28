@@ -9,6 +9,7 @@
         <div class="col-xs-1 col-sm-2 col-md-3 col-lg-3">
         </div>
     </div>
+<<<<<<< HEAD
     <div class="row">
     	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     		<form class="form-horizontal" role="form" id="miform" name="miform">
@@ -26,27 +27,7 @@
     		</form>
     	</div>
     </div>
+=======
+>>>>>>> 9541a0fd7c9e860e0681c0cc9e6df5abbef1f710
 </div>
 <!--body wrapper end-->
-
-<script>
-	$(document).ready(function() {
-		$('#enviar').click(function(event) {
-			$.ajax({
-				url: '../../app/models/prueba.php',
-				type: 'post',
-				data: $('#miform').serialize(),
-			})
-			.done(function() {
-				console.log("success");
-			})
-			.fail(function() {
-				console.log("error");
-			})
-			.always(function() {
-				console.log("complete");
-			});
-			
-		});
-	});
-</script>
