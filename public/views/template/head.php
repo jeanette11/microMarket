@@ -19,6 +19,6 @@
   <!--common-->
   <link href="../../resources/assets/css/style.css" rel="stylesheet">
   <link href="../../resources/assets/css/style-responsive.css" rel="stylesheet">
-
+  <script src="../../resources/assets/js/jquery-1.10.2.min.js"></script>
 </head>
 <body class="sticky-header">
