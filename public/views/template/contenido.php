@@ -20,7 +20,7 @@
 		
 				<div class="form-group">
 					<div class="col-sm-10 col-sm-offset-2">
-						<button type="button" class="btn btn-primary" id="enviar">Enviar</button>
+						<button type="button" class="btn btn-primary" id="enviar">siguiente</button>
 					</div>
 				</div>
     		</form>
