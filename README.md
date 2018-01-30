@@ -5,6 +5,7 @@ Esta es la estructura principal del proyecto
 * /app
 * /app/config -> **Se colocara las configuraciones necesarias para el proyecto**
 * /app/models -> **Se encontrara la logica del negocio divididas en carpetas deacuerdo al negocio**
+* /app/controller -> **Aqui se encontraran los controladores en la que se armara la vista, se recibira y enviara datos mediante este archivo**
 * /public
 * /public/views -> **se colocara las vistas del proyecto**
 * /public/views/template -> **aqui se encuentra la estrutura de la pagina principal**
