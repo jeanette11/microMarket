@@ -6,6 +6,5 @@
 	$sub_directory="";
 	$menu_a= array();
 	
-
 	require_once ('../../../public/views/plantilla.php');
 ?>
