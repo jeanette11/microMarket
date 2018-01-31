@@ -33,8 +33,8 @@
             <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
             <li class="menu-list"><a href=""><i class="fa fa-users"></i> <span>Usuarios</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="#"> Lista de usuarios</a></li>
-                    <li><a href="#"> Registro de usuarios</a></li>                    
+                    <li><a href="<?php echo ROOT_CONTROLLER; ?>user/"> Lista de usuarios</a></li>
+                    <li><a href="<?php echo ROOT_CONTROLLER; ?>user/registro.php"> Registro de usuarios</a></li>
                 </ul>
             </li>
             <li class=""><a href=""><i class="fa fa-shopping-cart"></i> <span>Ventas</span></a>

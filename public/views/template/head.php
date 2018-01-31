@@ -15,4 +15,13 @@
 <!--common-->
 <link href="<?php echo ROOT; ?>resources/assets/css/style.css" rel="stylesheet">
 <link href="<?php echo ROOT; ?>resources/assets/css/style-responsive.css" rel="stylesheet">
+<!--dynamic table-->
+<link href="<?php echo ROOT; ?>resources/assets/js/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+<link href="<?php echo ROOT; ?>resources/assets/js/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+<link rel="stylesheet" href="<?php echo ROOT; ?>resources/assets/js/data-tables/DT_bootstrap.css" />
+
+<link href="<?php echo ROOT; ?>resources/assets/css/style.css" rel="stylesheet">
+<link href="<?php echo ROOT; ?>resources/assets/css/jquery.stepy.css" rel="stylesheet">
+<link href="<?php echo ROOT; ?>resources/assets/css/style-responsive.css" rel="stylesheet">
+
 <script src="<?php echo ROOT; ?>resources/assets/js/jquery-1.10.2.min.js"></script>

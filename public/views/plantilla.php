@@ -30,7 +30,10 @@
 
             <!--body wrapper start-->
             <div class="wrapper">
-                <?php require_once ($contenido); ?>
+                <?php 
+                    if(isset($contenido))
+                        require_once ($contenido);
+                ?>
             </div>
             <!--body wrapper end-->
             <!--footer section start-->
