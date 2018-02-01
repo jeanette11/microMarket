@@ -17,17 +17,42 @@
 
 <div class="container">
 
-    <form class="form-signin" action="index.html">
+    <form class="form-signin" action="<?php echo ROOT_CONTROLLER.'login/index.php' ?>" name="frmlogin" id="frmlogin" method="post">
         <div class="form-signin-heading text-center">
-            <h1 class="sign-title">Ingresar</h1>
             <img src="<?php echo ROOT; ?>resources/assets/images/login-logo.png" alt=""/>
         </div>
         <div class="login-wrap">
-            <input type="text" class="form-control" placeholder="User ID" autofocus>
-            <input type="password" class="form-control" placeholder="Password">
-
-            <button class="btn btn-lg btn-login btn-block" type="submit">
-                <i class="fa fa-check"></i>
+            <div class="form-group ">
+                <input type="text" class="form-control" placeholder="Usuario" autofocus required="" minlength="3" name="usuario" id="usuario">
+            </div>
+            <div class="form-group ">
+                <input type="password" class="form-control" placeholder="Contraseña" required="" name="password" id="password">
+            </div>
+            <?php
+                if (isset($mlogin)) {
+                    if ($mlogin->errors):?>
+                      <div class="alert alert-danger alert-dismissible" role="alert">
+                        <strong>Error!</strong>
+                        <?php
+                          foreach ($mlogin->errors as $error) {
+                            echo $error;
+                          }
+                        ?>
+                      </div>
+                    <?php endif; ?>
+                    <?php
+                    if ($mlogin->messages):?>
+                        <div class="alert alert-success alert-dismissible" role="alert">
+                            <strong>Aviso!</strong>
+                            <?php
+                                foreach ($mlogin->messages as $message) {
+                                    echo $message;
+                                }?>
+                      </div>
+                    <?php endif;?>
+            <?php } ?>
+            <button class="btn btn-lg btn-login btn-block" type="submit" id="btnlogin" name="btnlogin">
+                <i class="fa fa-check"></i> Ingresar
             </button>
         </div>
     </form>
@@ -38,5 +63,15 @@
 <script src="<?php echo ROOT; ?>resources/assets/js/jquery-1.10.2.min.js"></script>
 <script src="<?php echo ROOT; ?>resources/assets/js/bootstrap.min.js"></script>
 <script src="<?php echo ROOT; ?>resources/assets/js/modernizr.min.js"></script>
+
+<script src="<?php echo ROOT; ?>resources/assets/js/jquery.validate.min.js"></script>
+<script src="<?php echo ROOT; ?>resources/assets/js/languajes/messages_es.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#frmlogin').validate({
+            //debug:true
+        });
+    });
+</script>
 </body>
 </html>

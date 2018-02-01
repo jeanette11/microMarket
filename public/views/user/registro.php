@@ -50,12 +50,12 @@
             submitHandler: function (form) {
                 $.ajax({
                     url: '../../models/user/registro_model.php',
-                    type: 'post',                    
+                    type: 'post',
                     data: $("#frmUsuario").serialize(),
-                    beforeSend: function() {                        
+                    beforeSend: function() {
                     },
                     success: function(response) {
-                        if(response==1){                       
+                        if(response==1){
                             window.location.href='<?php echo ROOT_CONTROLLER ?>user/index.php';
                         }else{
                             alert("Error al registrar");
