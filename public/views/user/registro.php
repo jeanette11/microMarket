@@ -1,117 +1,67 @@
 <div class="row">
-    <div class="col-md-12">
-        <h4 class="fw-title">Form Wizard with Validation</h4>
-        <div class="box-widget">
-            <div class="widget-head clearfix">
-                <div id="top_tabby" class="block-tabby pull-left">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Registro de usuario
+            </header>
+            <div class="panel-body">
+                <div class=" form">
+                    <form class="cmxform form-horizontal adminex-form" id="frmUsuario" name="frmUsuario" method="post">
+                        <div class="form-group ">
+                            <label for="cname" class="control-label col-lg-2">Nombre completo (obligatorio)</label>
+                            <div class="col-lg-8">
+                                <input class=" form-control" id="name" name="name" minlength="2" type="text" required />
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="user" class="control-label col-lg-2">nombre de usuario (Obligatorio)</label>
+                            <div class="col-lg-8">
+                                <input class="form-control " id="user" type="text" name="user" required />
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="password" class="control-label col-lg-2">Contraseña (obligatorio)</label>
+                            <div class="col-lg-8">
+                                <input class="form-control " id="password" type="password" name="password" required />
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="password_repeat" class="control-label col-lg-2">Repetir contraseña</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" type="password" id="password_repeat" name="password_repeat" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <button class="btn btn-primary" type="submit">Registrar</button>
+                                <button class="btn btn-default" type="button">Cancelar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="widget-container">
-                <div class="widget-block">
-                    <div class="widget-content box-padding">
-                        <form id="stepy_form" class=" form-horizontal left-align form-well">
-                            <fieldset title="Step 1">
-                                <legend>description one</legend>
-                                <div class="form-group">
-                                    <label class="col-md-2 col-sm-2 control-label">Username</label>
-                                    <div class="col-md-6 col-sm-6">
-                                        <input class="form-control" name="name" type="text"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-2 col-sm-2 control-label">Email Address</label>
-                                    <div class="col-md-6 col-sm-6">
-                                        <input class="form-control" name="email" type="email"/>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <fieldset title="Step 2">
-                                <legend>description two</legend>
-                                <div class="form-group">
-                                    <label class="col-md-2 col-sm-2 control-label">First Name</label>
-                                    <div class="col-md-6 col-sm-6">
-                                        <input type="text" placeholder="First Name" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-2 col-sm-2 control-label">Last Name</label>
-                                    <div class="col-md-6 col-sm-6">
-                                        <input type="text" placeholder="Last Name" class="form-control">
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <fieldset title="Step 3">
-                                <legend>description three</legend>
-                                <div class="form-group">
-                                    <label class="col-md-2 col-sm-2 control-label">Text Input</label>
-                                    <div class="col-md-6 col-sm-6">
-                                        <input type="text" placeholder="Text Input" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-2 col-sm-2 control-label">Checkbox</label>
-                                    <div class="col-md-6 col-sm-6">
-                                        <label class="checkbox">
-                                            <input type="checkbox" value="">
-                                            Option one is this and that—be sure to include why it's great </label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-2 col-sm-2 control-label">Radio</label>
-                                    <div class="col-md-6 col-sm-6">
-                                        <label class="radio">
-                                            <input type="radio" name="optionsRadios" value="option1" checked>
-                                            Option one is this and that—be sure to include why it's great </label>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <button type="submit" class="finish btn btn-info btn-extend"> Finish!</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
 </div>
 <script>
-    /*=====STEPY WIZARD====*/
-    $(function() {
-        $('#default').stepy({
-            backLabel: 'Previous',
-            block: true,
-            nextLabel: 'Next',
-            titleClick: true,
-            titleTarget: '.stepy-tab'
-        });
-    });
-    /*=====STEPY WIZARD WITH VALIDATION====*/
-    $(function() {
-        $('#stepy_form').stepy({
-            backLabel: 'Back',
-            nextLabel: 'Next',
-            errorImage: true,
-            block: true,
-            description: true,
-            legend: false,
-            titleClick: true,
-            titleTarget: '#top_tabby',
-            validate: true
-        });
-        $('#stepy_form').validate({
-            errorPlacement: function(error, element) {
-                $('#stepy_form div.stepy-error').append(error);
-            },
-            rules: {
-                'name': 'required',
-                'email': 'required'
-            },
-            messages: {
-                'name': {
-                    required: 'Name field is required!'
-                },
-                'email': {
-                    required: 'Email field is requerid!'
-                }
+    $(document).ready(function() {
+        $("#frmUsuario").validate({
+            debug:true,
+            submitHandler: function (form) {
+                $.ajax({
+                    url: '../../models/user/registro_model.php',
+                    type: 'post',                    
+                    data: $("#frmUsuario").serialize(),
+                    beforeSend: function() {                        
+                    },
+                    success: function(response) {
+                        if(response==1){                       
+                            window.location.href='<?php echo ROOT_CONTROLLER ?>user/index.php';
+                        }else{
+                            alert("Error al registrar");
+                        }
+                    }
+                });
             }
         });
     });

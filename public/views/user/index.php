@@ -5,7 +5,7 @@
                 Lista de usuarios
                 <span class="tools pull-right">
                     <a href="javascript:;" class="fa fa-chevron-down"></a>
-                    <a href="<?php ROOT_CONTROLLER; ?>user/registro.php" class="fa fa-times"></a>
+                    <a href="<?php echo ROOT_CONTROLLER; ?>user/registro.php" class="fa fa-plus"></a>
                  </span>
             </header>
             <div class="panel-body">
@@ -13,36 +13,28 @@
                     <table  class="display table table-bordered table-striped" id="dynamic-table">
                         <thead>
                             <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th class="hidden-phone">Engine version</th>
-                                <th class="hidden-phone">CSS grade</th>
+                                <th>Nombre completo</th>
+                                <th>Usuario</th>
+                                <th>Estado</th>
+                                <th class="hidden-phone">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="gradeX">
-                                <td>Trident</td>
-                                <td>Internet Explorer 4.0</td>
-                                <td>Win 95+</td>
-                                <td class="center hidden-phone">4</td>
-                                <td class="center hidden-phone">X</td>
-                            </tr>
-                            <tr class="gradeU">
-                                <td>Other browsers</td>
-                                <td>All others</td>
-                                <td>-</td>
-                                <td class="center hidden-phone">-</td>
-                                <td class="center hidden-phone">U</td>
-                            </tr>
+                            <?php foreach ($usuarios as $user): ?>
+                                <tr class="gradeX">
+                                    <td><?php echo $user['nombre']; ?></td>
+                                    <td><?php echo $user['usuario']; ?></td>
+                                    <td><?php echo $user['estado']; ?></td>
+                                    <td ></td>
+                                </tr>
+                            <?php endforeach ?>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th class="hidden-phone">Engine version</th>
-                                <th class="hidden-phone">CSS grade</th>
+                                <th>Nombre completo</th>
+                                <th>Usuario</th>
+                                <th>Estado</th>
+                                <th class="hidden-phone">Acciones</th>
                             </tr>
                         </tfoot>
                     </table>
