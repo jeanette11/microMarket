@@ -10,9 +10,7 @@
 	if (!($usuarios = $con->query("SELECT * FROM usuario_login"))) {
     	echo "Falló SELECT: (" . $con->errno . ") " . $con->error;
 	}
-
 	//var_dump($usuarios->fetch_assoc());
-	$pie_class="si";//Variable donde se poneun pie de pagina estatico
-	
+	$pie_class="si";//Variable donde se poneun pie de pagina estatico	
 	require_once ('../../../public/views/plantilla.php');
 ?>
