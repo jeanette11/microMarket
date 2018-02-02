@@ -10,7 +10,6 @@
     <!--logo and iconic logo end-->
 
     <div class="left-side-inner">
-
         <!-- visible to small devices only -->
         <div class="visible-xs hidden-sm hidden-md hidden-lg">
             <div class="media logged-user">
