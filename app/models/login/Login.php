@@ -58,6 +58,7 @@
             $_SESSION = array();
             session_destroy();
             $this->messages[] = "Has sido desconectado.";
+            header("location: ".ROOT);
         }
 
         public function estaConectado()

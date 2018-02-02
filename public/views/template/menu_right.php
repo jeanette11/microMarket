@@ -3,13 +3,13 @@
         <li>
             <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                 <img src="<?php echo ROOT; ?>resources/assets/images/photos/user-avatar.png" alt="" />
-                <?php  ?>Nombre de usuario
+                <?php echo $_SESSION['nombre']; ?>
                 <span class="caret"></span>
             </a>
             <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
                 <li><a href="#"><i class="fa fa-user"></i>  Perfil</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i>  Configuraciones</a></li>
-                <li><a href="#"><i class="fa fa-sign-out"></i> Salir</a></li>
+                <li><a href="<?php echo ROOT_CONTROLLER; ?>login/index.php?logout"><i class="fa fa-sign-out"></i> Salir</a></li>
             </ul>
         </li>
     </ul>

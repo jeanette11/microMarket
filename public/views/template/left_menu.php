@@ -16,15 +16,15 @@
             <div class="media logged-user">
                 <img alt="" src="<?php echo ROOT; ?>resources/assets/images/photos/user-avatar.png" class="media-object">
                 <div class="media-body">
-                    <h4><a href="#"><?php  ?>Nombre de usuario</a></h4>
-                    <span>"Hola bienvenido"</span>
+                    <h4><a href="#"> <?php echo $_SESSION['nombre']; ?></a></h4>
+                    <span>"<?php echo $_SESSION['user_name']; ?>"</span>
                 </div>
             </div>
             <h5 class="left-nav-title">Información de cuenta</h5>
             <ul class="nav nav-pills nav-stacked custom-nav">
               <li><a href="#"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
               <li><a href="#"><i class="fa fa-cog"></i> <span>Configuraciones</span></a></li>
-              <li><a href="#"><i class="fa fa-sign-out"></i> <span>Salir</span></a></li>
+              <li><a href="<?php echo ROOT_CONTROLLER; ?>login/index.php?logout"><i class="fa fa-sign-out"></i> <span>Salir</span></a></li>
             </ul>
         </div>
 
@@ -39,7 +39,18 @@
             </li>
             <li class=""><a href=""><i class="fa fa-shopping-cart"></i> <span>Ventas</span></a>
             </li>
-
+            <li class="menu-list"><a href="#"><i class="fa fa-bookmark"></i> <span>Categoria</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="google_map.html"> Lista de categorias</a></li>
+                    <li><a href="vector_map.html"> Registro de categoria</a></li>
+                </ul>
+            </li>
+            <li class="menu-list"><a href="#"><i class="fa fa-book"></i> <span>Productos</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="google_map.html"> Listado</a></li>
+                    <li><a href="vector_map.html"> Registro de producto</a></li>
+                </ul>
+            </li>
             <li class="menu-list"><a href=""><i class="fa fa-copy"></i> <span>Reportes</span></a>
                 <ul class="sub-menu-list">
                     <li><a href="#"> Reporte 1</a></li>
