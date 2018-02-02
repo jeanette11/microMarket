@@ -22,8 +22,7 @@
             </div>
             <h5 class="left-nav-title">Información de cuenta</h5>
             <ul class="nav nav-pills nav-stacked custom-nav">
-              <li><a href="<?php echo ROOT_CONTROLLER; ?>user/perfil.php"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
-              <li><a href="<?php echo ROOT_CONTROLLER; ?>user/"><i class="fa fa-cog"></i> <span>Configuraciones</span></a></li>
+              <li><a href="<?php echo ROOT_CONTROLLER; ?>user/perfil.php"><i class="fa fa-user"></i> <span> Mi cuenta</span></a></li>
               <li><a href="<?php echo ROOT_CONTROLLER; ?>login/index.php?logout"><i class="fa fa-sign-out"></i> <span>Salir</span></a></li>
             </ul>
         </div>

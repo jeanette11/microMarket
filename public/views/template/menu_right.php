@@ -7,8 +7,7 @@
                 <span class="caret"></span>
             </a>
             <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                <li><a href="#"><i class="fa fa-user"></i>  Perfil</a></li>
-                <li><a href="#"><i class="fa fa-cog"></i>  Configuraciones</a></li>
+                <li><a href="<?php echo ROOT_CONTROLLER; ?>user/perfil.php"><i class="fa fa-user"></i>  Mi cuenta</a></li>
                 <li><a href="<?php echo ROOT_CONTROLLER; ?>login/index.php?logout"><i class="fa fa-sign-out"></i> Salir</a></li>
             </ul>
         </li>
