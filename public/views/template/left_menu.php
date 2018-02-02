@@ -37,7 +37,7 @@
                     <li><a href="<?php echo ROOT_CONTROLLER; ?>user/registro.php"> Registro de usuarios</a></li>
                 </ul>
             </li>
-            <li class=""><a href=""><i class="fa fa-shopping-cart"></i> <span>Ventas</span></a>
+            <li class=""><a href="<?php echo ROOT_CONTROLLER; ?>ventas/"><i class="fa fa-shopping-cart"></i> <span>Ventas</span></a>
             </li>
             <li class="menu-list"><a href="#"><i class="fa fa-bookmark"></i> <span>Categoria</span></a>
                 <ul class="sub-menu-list">
