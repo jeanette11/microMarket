@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v12.09 (64 bit)
-MySQL - 10.1.8-MariaDB : Database - marketbd
+MySQL - 5.7.19 : Database - marketbd
 *********************************************************************
 */
 
@@ -29,6 +29,10 @@ CREATE TABLE `categoria` (
 
 /*Data for the table `categoria` */
 
+LOCK TABLES `categoria` WRITE;
+
+UNLOCK TABLES;
+
 /*Table structure for table `cliente` */
 
 DROP TABLE IF EXISTS `cliente`;
@@ -42,6 +46,10 @@ CREATE TABLE `cliente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 /*Data for the table `cliente` */
+
+LOCK TABLES `cliente` WRITE;
+
+UNLOCK TABLES;
 
 /*Table structure for table `compra_r` */
 
@@ -63,6 +71,10 @@ CREATE TABLE `compra_r` (
 
 /*Data for the table `compra_r` */
 
+LOCK TABLES `compra_r` WRITE;
+
+UNLOCK TABLES;
+
 /*Table structure for table `producto` */
 
 DROP TABLE IF EXISTS `producto`;
@@ -82,6 +94,10 @@ CREATE TABLE `producto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 /*Data for the table `producto` */
+
+LOCK TABLES `producto` WRITE;
+
+UNLOCK TABLES;
 
 /*Table structure for table `producto_etiquetado` */
 
@@ -107,6 +123,10 @@ CREATE TABLE `producto_etiquetado` (
 
 /*Data for the table `producto_etiquetado` */
 
+LOCK TABLES `producto_etiquetado` WRITE;
+
+UNLOCK TABLES;
+
 /*Table structure for table `productos_deriados` */
 
 DROP TABLE IF EXISTS `productos_deriados`;
@@ -125,6 +145,10 @@ CREATE TABLE `productos_deriados` (
 
 /*Data for the table `productos_deriados` */
 
+LOCK TABLES `productos_deriados` WRITE;
+
+UNLOCK TABLES;
+
 /*Table structure for table `usuario_login` */
 
 DROP TABLE IF EXISTS `usuario_login`;
@@ -138,9 +162,112 @@ CREATE TABLE `usuario_login` (
   `estado` tinyint(1) NOT NULL DEFAULT '1',
   `tipo` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 /*Data for the table `usuario_login` */
+
+LOCK TABLES `usuario_login` WRITE;
+
+insert  into `usuario_login`(`id_usuario`,`nombre`,`fecha_registro`,`usuario`,`contrasenia`,`estado`,`tipo`) values (1,'Haki Ari','2018-02-01 02:26:10','admin','$2y$10$I18B6QvoVkPXvkgGTCdqNOx34WRsatkevdUvKbvfihfLizu/GmuTO',1,0);
+
+UNLOCK TABLES;
+
+/* Procedure structure for procedure `eliminarCliente` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `eliminarCliente` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `eliminarCliente`(
+in id_c int
+)
+BEGIN
+delete from cliente where id_cliente=id_c;
+END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `eliminarUsuario` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `eliminarUsuario` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `eliminarUsuario`(
+in id_u int
+)
+BEGIN
+delete from usuario_login where id_usuario=id_u;
+END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `insertarcliente` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `insertarcliente` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `insertarcliente`(
+in ci varchar(20),
+in Nombre varchar(200)
+)
+BEGIN
+insert into cliente(ci,nombre) values(ci,nombre);
+END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `insertarUsuario` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `insertarUsuario` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `insertarUsuario`(
+in Nombre varchar(200),
+in fecha_registro datetime,
+in Usuario varchar(100),
+in contrasenia varchar(255),
+in tipo int(11)
+)
+BEGIN
+insert into usuario_login(nombre, fecha_registro, usuario, contrasenia, tipo) values(Nombre,fecha_registro,Usuario,contrasenia,tipo);
+END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `modificarCliente` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `modificarCliente` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `modificarCliente`(
+in id_c int,
+in ci varchar(20),
+in Nombre varchar(200)
+)
+BEGIN
+update cliente set nombre=Nombre, ci=ci where id_cliente=id_c;
+END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `modificarUsuario` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `modificarUsuario` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `modificarUsuario`(
+in id_u int,
+in Nombre varchar(200),
+in fecha_reg datetime,
+in Usuario varchar(100),
+in contrasenia varchar(255),
+in estado tinyint(1),
+in tipo int(11)
+)
+BEGIN
+update usuario_login set nombre=Nombre, fecha_registro=fecha_reg,usuario=Usuario,contrasenia=contrasenia,estado=estado,tipo=tipo where id_usuario=id_u;
+END */$$
+DELIMITER ;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
