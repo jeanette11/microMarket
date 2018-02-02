@@ -1,11 +1,11 @@
 <div class="left-side sticky-left-side">
     <!--logo and iconic logo start-->
     <div class="logo">
-        <a href="index.html"><img src="<?php echo ROOT; ?>resources/assets/images/logo.png" alt=""></a>
+        <a href="<?php echo ROOT; ?>"><img src="<?php echo ROOT; ?>resources/assets/images/logo.png" alt=""></a>
     </div>
 
     <div class="logo-icon text-center">
-        <a href="index.html"><img src="<?php echo ROOT; ?>resources/assets/images/logo_icon.png" alt=""></a>
+        <a href="<?php echo ROOT; ?>"><img src="<?php echo ROOT; ?>resources/assets/images/logo_icon.png" alt=""></a>
     </div>
     <!--logo and iconic logo end-->
 
@@ -22,8 +22,8 @@
             </div>
             <h5 class="left-nav-title">Información de cuenta</h5>
             <ul class="nav nav-pills nav-stacked custom-nav">
-              <li><a href="#"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
-              <li><a href="#"><i class="fa fa-cog"></i> <span>Configuraciones</span></a></li>
+              <li><a href="<?php echo ROOT_CONTROLLER; ?>user/perfil.php"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
+              <li><a href="<?php echo ROOT_CONTROLLER; ?>user/"><i class="fa fa-cog"></i> <span>Configuraciones</span></a></li>
               <li><a href="<?php echo ROOT_CONTROLLER; ?>login/index.php?logout"><i class="fa fa-sign-out"></i> <span>Salir</span></a></li>
             </ul>
         </div>
@@ -42,13 +42,13 @@
             <li class="menu-list"><a href="#"><i class="fa fa-bookmark"></i> <span>Categoria</span></a>
                 <ul class="sub-menu-list">
                     <li><a href="<?php echo ROOT_CONTROLLER; ?>categoria/"> Lista de categorias</a></li>
-                    <li><a href=""> Registro de categoria</a></li>
+                    <li><a href="<?php echo ROOT_CONTROLLER; ?>categoria/registro.php"> Registro de categoria</a></li>
                 </ul>
             </li>
             <li class="menu-list"><a href="#"><i class="fa fa-book"></i> <span>Productos</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="#"> Listado</a></li>
-                    <li><a href="#"> Registro de producto</a></li>
+                    <li><a href="<?php echo ROOT_CONTROLLER; ?>producto/"> Listado</a></li>
+                    <li><a href="<?php echo ROOT_CONTROLLER; ?>producto/registro"> Registro de producto</a></li>
                 </ul>
             </li>
             <li class="menu-list"><a href=""><i class="fa fa-copy"></i> <span>Reportes</span></a>
@@ -60,8 +60,8 @@
             </li>
             <li class="menu-list"><a href="#"><i class="fa fa-tags"></i> <span>Clientes</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="google_map.html"> Lista de clientes</a></li>
-                    <li><a href="vector_map.html"> Registro de clientes</a></li>
+                    <li><a href="<?php echo ROOT_CONTROLLER; ?>cliente"> Lista de clientes</a></li>
+                    <li><a href="<?php echo ROOT_CONTROLLER; ?>cliente/registro.php"> Registro de clientes</a></li>
                 </ul>
             </li>
             <li><a href="<?php echo ROOT_CONTROLLER; ?>login/index.php?logout"><i class="fa fa-sign-in"></i> <span>Salir</span></a></li>
