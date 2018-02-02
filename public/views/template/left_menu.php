@@ -30,7 +30,7 @@
 
         <!--sidebar nav start-->
         <ul class="nav nav-pills nav-stacked custom-nav">
-            <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
+            <li class="active"><a href="<?php echo ROOT; ?>"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
             <li class="menu-list"><a href=""><i class="fa fa-users"></i> <span>Usuarios</span></a>
                 <ul class="sub-menu-list">
                     <li><a href="<?php echo ROOT_CONTROLLER; ?>user/"> Lista de usuarios</a></li>
@@ -41,14 +41,14 @@
             </li>
             <li class="menu-list"><a href="#"><i class="fa fa-bookmark"></i> <span>Categoria</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="google_map.html"> Lista de categorias</a></li>
-                    <li><a href="vector_map.html"> Registro de categoria</a></li>
+                    <li><a href="<?php echo ROOT_CONTROLLER; ?>categoria/"> Lista de categorias</a></li>
+                    <li><a href=""> Registro de categoria</a></li>
                 </ul>
             </li>
             <li class="menu-list"><a href="#"><i class="fa fa-book"></i> <span>Productos</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="google_map.html"> Listado</a></li>
-                    <li><a href="vector_map.html"> Registro de producto</a></li>
+                    <li><a href="#"> Listado</a></li>
+                    <li><a href="#"> Registro de producto</a></li>
                 </ul>
             </li>
             <li class="menu-list"><a href=""><i class="fa fa-copy"></i> <span>Reportes</span></a>
