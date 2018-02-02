@@ -53,7 +53,7 @@
                     <li><a href="vector_map.html"> Registro de clientes</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fa fa-sign-in"></i> <span>Salir</span></a></li>
+            <li><a href="<?php echo ROOT_CONTROLLER; ?>login/index.php?logout"><i class="fa fa-sign-in"></i> <span>Salir</span></a></li>
         </ul>
         <!--sidebar nav end-->
     </div>

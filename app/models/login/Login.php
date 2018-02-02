@@ -29,14 +29,14 @@
                 if (!$this->db_connection->connect_errno) {
                     $user_name = $this->db_connection->real_escape_string($_POST['usuario']);
 
-                    $sql = "SELECT nombre, usuario, estado, password, tipo
+                    $sql = "SELECT nombre, usuario, estado, contrasenia, tipo
                             FROM usuario_login
                             WHERE usuario = '{$user_name}' AND estado=1";
-                    $resultado = $this->db_connection->query($sql);
+                    $result_of_login_check = $this->db_connection->query($sql);
 
-                    if ($resultado->num_rows == 1) {
-                        $result_row = $resultado->fetch_object();
-                        if (password_verify($_POST['user_password'], $result_row->password)) {
+                    if ($result_of_login_check->num_rows == 1) {
+                        $result_row = $result_of_login_check->fetch_object();
+                        if (password_verify($_POST['password'], $result_row->contrasenia)) {
     						$_SESSION['user_name'] = $result_row->usuario;
                             $_SESSION['nombre'] = $result_row->nombre;
                             $_SESSION['rol'] = $result_row->tipo;

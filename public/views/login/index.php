@@ -17,7 +17,7 @@
 
 <div class="container">
 
-    <form class="form-signin" action="<?php echo ROOT_CONTROLLER.'login/index.php' ?>" name="frmlogin" id="frmlogin" method="post">
+    <form class="form-signin" action="" name="frmlogin" id="frmlogin" method="post">        
         <div class="form-signin-heading text-center">
             <img src="<?php echo ROOT; ?>resources/assets/images/login-logo.png" alt=""/>
         </div>
@@ -32,6 +32,9 @@
                 if (isset($mlogin)) {
                     if ($mlogin->errors):?>
                       <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close close-sm" data-dismiss="alert">
+                            <i class="fa fa-times"></i>
+                        </button>
                         <strong>Error!</strong>
                         <?php
                           foreach ($mlogin->errors as $error) {

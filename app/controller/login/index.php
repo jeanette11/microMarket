@@ -7,12 +7,8 @@
 	//Variables para enviar a la plantilla
 	$titulo="Identificate";
 	if ($mlogin->estaConectado() == true)
-
 		header("location: ".ROOT);
 	else{
 		require_once ('../../../public/views/login/index.php');
 	}
-
-
-	
 ?>
