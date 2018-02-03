@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v12.09 (64 bit)
-MySQL - 5.7.19 : Database - marketbd
+MySQL - 10.1.8-MariaDB : Database - marketbd
 *********************************************************************
 */
 
@@ -29,11 +29,7 @@ CREATE TABLE `categoria` (
 
 /*Data for the table `categoria` */
 
-LOCK TABLES `categoria` WRITE;
-
 insert  into `categoria`(`id_cat`,`nombre`,`limite`) values (1,'CARNES',0),(2,'FRUTAS',0),(3,'VERDURAS',0),(4,'TUBERCULOS',0);
-
-UNLOCK TABLES;
 
 /*Table structure for table `cliente` */
 
@@ -48,10 +44,6 @@ CREATE TABLE `cliente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 /*Data for the table `cliente` */
-
-LOCK TABLES `cliente` WRITE;
-
-UNLOCK TABLES;
 
 /*Table structure for table `compra_r` */
 
@@ -73,10 +65,6 @@ CREATE TABLE `compra_r` (
 
 /*Data for the table `compra_r` */
 
-LOCK TABLES `compra_r` WRITE;
-
-UNLOCK TABLES;
-
 /*Table structure for table `producto` */
 
 DROP TABLE IF EXISTS `producto`;
@@ -96,11 +84,7 @@ CREATE TABLE `producto` (
 
 /*Data for the table `producto` */
 
-LOCK TABLES `producto` WRITE;
-
 insert  into `producto`(`id_prod`,`nroplu`,`descripcion`,`tipo`,`precio`,`cod_barras`,`id_cat`) values (1,1,'filete',2,60,'2001',1),(2,2,'pulpa',2,48,'2002',1),(3,3,'cabeza de lomo',2,48,'2003',1),(4,4,'peseto',2,48,'2004',1),(5,5,'churrasco',2,38,'2005',1),(6,6,'aujilla',2,30,'2006',1),(7,7,'costilla',2,28,'2007',1),(8,8,'cadera',2,32,'2008',1),(9,9,'pecho',2,28,'2009',1),(10,10,'lapin',2,32,'2010',1),(11,11,'molida',2,38,'2011',1),(12,12,'ozobuco',2,28,'2012',1),(13,13,'pollo',2,16,'2013',1),(14,14,'pescado_pacu',2,40,'2014',1),(15,15,'pescado_trucha',2,45,'2015',1),(16,16,'pesacado_pejerrey',2,50,'2016',1),(17,17,'huevo_setenta',1,0,'1017',1),(18,18,'huevo_ochenta',1,0,'1018',1),(19,19,'papaya',1,8,'1019',2),(20,20,'platano',1,0,'1020',2),(21,21,'naranja',1,0,'1021',2),(22,22,'durazno',2,8,'2022',2),(23,23,'tuna',1,1,'1023',2),(24,24,'piña',1,10,'1024',2),(25,25,'mandarina',1,0,'1025',2),(26,26,'uva',2,10,'2026',2),(27,27,'apio',2,3,'2027',3),(28,28,'zanahoria',2,6,'2028',3),(29,29,'vainitas',2,6,'2029',3),(30,30,'espinaca',2,8,'2030',3),(31,31,'arberja',2,10,'2031',3),(32,32,'postre',1,1,'1032',3),(33,33,'locoto',2,10,'2033',3),(34,34,'perejil',2,3,'2034',3),(35,35,'cebolla',2,8,'2035',3),(36,36,'papa',2,6,'2036',4),(37,37,'camote',2,6,'2037',4),(38,38,'yuca',2,8,'2038',4);
-
-UNLOCK TABLES;
 
 /*Table structure for table `producto_etiquetado` */
 
@@ -123,10 +107,6 @@ CREATE TABLE `producto_etiquetado` (
 
 /*Data for the table `producto_etiquetado` */
 
-LOCK TABLES `producto_etiquetado` WRITE;
-
-UNLOCK TABLES;
-
 /*Table structure for table `usuario_login` */
 
 DROP TABLE IF EXISTS `usuario_login`;
@@ -144,11 +124,7 @@ CREATE TABLE `usuario_login` (
 
 /*Data for the table `usuario_login` */
 
-LOCK TABLES `usuario_login` WRITE;
-
 insert  into `usuario_login`(`id_usuario`,`nombre`,`fecha_registro`,`usuario`,`contrasenia`,`estado`,`tipo`) values (1,'Haki Ari','2018-02-01 02:26:10','admin','$2y$10$I18B6QvoVkPXvkgGTCdqNOx34WRsatkevdUvKbvfihfLizu/GmuTO',1,0);
-
-UNLOCK TABLES;
 
 /* Procedure structure for procedure `eliminarCliente` */
 
