@@ -46,7 +46,7 @@
             <li class="menu-list"><a href="#"><i class="fa fa-book"></i> <span>Productos</span></a>
                 <ul class="sub-menu-list">
                     <li><a href="<?php echo ROOT_CONTROLLER; ?>producto/"> Listado</a></li>
-                    <li><a href="<?php echo ROOT_CONTROLLER; ?>producto/registro"> Registro de producto</a></li>
+                    <li><a href="<?php echo ROOT_CONTROLLER; ?>producto/registro.php"> Registro de producto</a></li>
                 </ul>
             </li>
             <li class="menu-list"><a href=""><i class="fa fa-copy"></i> <span>Reportes</span></a>
